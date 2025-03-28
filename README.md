@@ -98,7 +98,7 @@
 - Check if all queries are correctly linked
 
 ## Here's the screenshot of my output before I started data cleaning
-[!Image](https://github.com/roannefajardo/EDM-Fajardo/blob/main/Lab%20Task%202/images/QueryNaMadumi.png?raw=true)
+![Image](https://github.com/roannefajardo/EDM-Fajardo/blob/main/Lab%20Task%202/images/QueryNaMadumi.png?raw=true)
 
 
 ## Here's the screenshot of my output after I started data cleaning
