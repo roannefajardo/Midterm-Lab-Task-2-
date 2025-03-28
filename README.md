@@ -1,3 +1,4 @@
+
 # Midterm Task 2 -  Data Cleaning and Preparation using POWER QUERY
 - This portfolio shows how to use Power Query for data preparation and cleansing. The dataset is made up of several connected tables, and before analysis, cleaning methods are used to enhance the consistency and quality of the data.
 
@@ -31,3 +32,90 @@
    - If Job Title contains "Machine Learning" → Assign "Machine Learning Engineer"  
    - Otherwise, assign "Other"  
 - Change the column type to Text  
+
+## Step 3 Split Location Column
+- Select the Location column
+-  Add a Custom Column with corrections:  
+   - If Location = "New Jersey" → Assign ", NJ"  
+   - If Location = "Remote" or "United States" → Assign ", Other"  
+   - If Location = "Texas" → Assign ", TX"  
+   - If Location = "California" → Assign ", CA"  
+- Click OK, then select the new column  
+- Go to Transform → Split Column → By Delimiter (comma ",")  
+- Click OK  
+- Rename the second split column to "State Abbreviations"  
+- Check and replace incorrect values (e.g., "Anne Rundell" → "MA")  
+
+
+## Step 4 Split Size Column
+- Create two new columns: MinCompanySize and MaxCompanySize  
+- Use the same method as Salary Estimate to split values
+### Handle Negative Values
+- Filter out -1s from the Competitors column  
+- Filter out 0s from the Revenues column  
+- Remove -1s from the Industry column
+### Clean Company Names
+- Remove any extra characters or ratings after company names
+### Copy Cleaning Steps as Proof 
+- Go to Home Menu → Click Advanced Editor  
+- Copy and save the code in your portfolio
+
+## Step 5 Reshape and Group Data
+### Group by Role Type
+- Duplicate the raw data → Rename it as "Sal By Role Type dup"
+- Select only Role Type, Min Salary, and Max Salary columns  
+- Change Min and Max Salary type to currency  
+- Multiply values by 1000 (Numbers Column → Standard → Multiply → Type 1000)  
+- Group rows by Role Type and get the average for Min and Max Salary
+
+### Group by Company Size  
+- Create a reference of raw data → Rename it as "Sal By Role Size ref"
+- Select only Size, Min Salary, and Max Salary columns  
+- Change Min and Max Salary type to currency  
+- Multiply values by 1000  
+- Group rows by Size and get the average for Min and Max Salary  
+
+
+## Step 6 Merge State Mapping
+- Click Unclean DS Jobs  
+- Right-click in the Queries pane → New Query → Open Workbook State Mapping  
+- Select the columns and click OK  
+- Select Uncleaned DS Jobs query  
+- Choose the State Abbreviation column in both queries  
+- Click Merge → Click OK  
+- Rename the merged column as "State Full Name"  
+- Remove nulls and blanks  
+
+## Step 7 Group by State
+- Create a reference of raw data → Rename it as "Sal By State ref"  
+- Select only State Full Name, Min Salary, and Max Salary columns  
+- Change Min and Max Salary type to currency  
+- Multiply values by 1000  
+- Group rows by State Full Name and get the average for Min and Max Salary
+
+## Step 13: View Query Dependencies  
+- Go to View Menu → Click Dependencies  
+- Check if all queries are correctly linked
+
+## Here's the screenshot of my output before I started data cleaning
+<img src="images/QueryNaMadumi.png" alt="Alt Text" Width="900" heigth="300">
+
+
+## Here's the screenshot of my output after I started data cleaning
+<img src="images/Clead_DS_jobs.png" alt="Alt Text" Width="900" heigth="300">
+
+<img src="images/Role Size Ref.png" alt="Alt Text" Width="900" heigth="300">
+
+<img src="images/Role Type Ref.png" alt="Alt Text" Width="900" heigth="300">
+
+<img src="images/Size RoleType Ref.png" alt="Alt Text" Width="900" heigth="300">
+
+<img src="images/State Ref.png" alt="Alt Text" Width="900" heigth="300">
+
+<img src="images/State.png" alt="Alt Text" Width="900" heigth="300">
+
+## Here's the screenshot of the Query Dependencies
+<img src="images/Querydependency.png" alt="Alt Text" Width="900" heigth="300">
+
+
+
