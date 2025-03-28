@@ -98,24 +98,24 @@
 - Check if all queries are correctly linked
 
 ## Here's the screenshot of my output before I started data cleaning
-<img src="images/QueryNaMadumi.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/blob/main/Lab%20Task%202/images/QueryNaMadumi.png?raw=true)
 
 
 ## Here's the screenshot of my output after I started data cleaning
-<img src="images/Clead_DS_jobs.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Clead_DS_jobs.png)
 
-<img src="images/Role Size Ref.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Role%20Size%20Ref.png)
 
-<img src="images/Role Type Ref.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Role%20Type%20Ref.png)
 
-<img src="images/Size RoleType Ref.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Size%20RoleType%20Ref.png)
 
-<img src="images/State Ref.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/State%20Ref.png)
 
-<img src="images/State.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/State.png)
 
 ## Here's the screenshot of the Query Dependencies
-<img src="images/Querydependency.png" alt="Alt Text" Width="900" heigth="300">
+[!Image](https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Querydependency.png)
 
 
 
