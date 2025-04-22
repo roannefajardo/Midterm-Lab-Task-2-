@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roanne's EDM Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #8a2be2);
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 12px #ff69b4;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff;
+      color: #ffb6c1;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      color: #ffccff;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #ffb6c1;
+      margin: 20px auto;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 0 15px #ff66cc;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #ffccff;
+      text-align: center;
+      text-shadow: 0 0 5px #ff99ff;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px #ff1493;
+    }
+
+    .card p, .card a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ffe6f0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin: 0.4rem 0;
+      color: #ffb6c1;
+      text-decoration: none;
+      border-bottom: 1px dashed #fff;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ffb6c1;
+      box-shadow: 0 -4px 12px #da70d6;
+    }
+
+    /* Glitter animation */
+    .glitter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://i.pinimg.com/originals/0f/38/17/0f3817da1af829075774018b36ebb587.gif');
+      background-repeat: repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 10s infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    .heart::before, .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+      }
+    }
+
+    /* Ensuring images autofit */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glitter"></div>
+
+  <!-- Floating Hearts -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = `${Math.random() * 100}%`;
+      heart.style.animationDuration = `${5 + Math.random() * 10}s`;
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <header>
+    <h1>🌸 Midterm Lab Task 2- Data Cleaning and Preparation using Excel 🌸</h1>
+    <p>🌷Shining through code and creativity🌷 </p>
+  </header>
+
+  <section>
+    <h2>Portfolio Overview</h2>
+    <div class="card">
+      <p>This portfolio shows how to use Power Query for data preparation and cleansing. The dataset is made up of several connected tables, and before analysis, cleaning methods are used to enhance the consistency and quality of the data.</p>
+    </div>
+
+    <h2>Step by Step Process</h2>
+    <div class="card">
+      <h2>Step 1 Download and Load Data</h2>
+<ul>
+  <li>Download the dataset (Uncleaned_DS_jobs.csv)</li>
+  <li>Open Excel</li>
+  <li>Go to Data → New Query → Open File → Text/CSV</li>
+  <li>Click Load and then Edit using Power Query Editor</li>
+</ul>
+
+<h3>Duplicate Raw Data</h3>
+<ul>
+  <li>Right-click the dataset in the Queries pane</li>
+  <li>Select Duplicate</li>
+</ul>
+
+<h3>Clean Salary Data</h3>
+<ul>
+  <li>Select the Salary Estimate column</li>
+  <li>Go to Transform Menu → Extract → Text Before Delimiter</li>
+  <li>Type "(" and click OK</li>
+  <li>Create two new columns: Min Salary and Max Salary</li>
+  <li>Rename the column to "Min Sal" and repeat the process for Max Salary</li>
+</ul>
+
+<h2>Step 2 Add Role Type Column</h2>
+<ul>
+  <li>Go to Add Column Menu → Custom Column</li>
+  <li>Rename the column to "Role Type"</li>
+  <li>Use logic for assigning roles based on Job Title</li>
+  <li>Change the column type to Text</li>
+</ul>
+
+<h2>Step 3 Split Location Column</h2>
+<ul>
+  <li>Select the Location column</li>
+  <li>Add a Custom Column with corrections</li>
+  <li>Click OK, then select the new column</li>
+  <li>Go to Transform → Split Column → By Delimiter (comma ",")</li>
+  <li>Rename the second split column to "State Abbreviations"</li>
+  <li>Check and replace incorrect values (e.g., "Anne Rundell" → "MA")</li>
+</ul>
+
+<h2>Step 4 Split Size Column</h2>
+<ul>
+  <li>Create two new columns: MinCompanySize and MaxCompanySize</li>
+  <li>Use the same method as Salary Estimate to split values</li>
+</ul>
+
+<h3>Handle Negative Values</h3>
+<ul>
+  <li>Filter out -1s from the Competitors column</li>
+  <li>Filter out 0s from the Revenues column</li>
+  <li>Remove -1s from the Industry column</li>
+</ul>
+
+<h3>Clean Company Names</h3>
+<ul>
+  <li>Remove any extra characters or ratings after company names</li>
+</ul>
+
+<h3>Copy Cleaning Steps as Proof</h3>
+<ul>
+  <li>Go to Home Menu → Click Advanced Editor</li>
+  <li>Copy and save the code in your portfolio</li>
+</ul>
+
+<h2>Step 5 Reshape and Group Data</h2>
+
+<h3>Group by Role Type</h3>
+<ul>
+  <li>Duplicate the raw data → Rename it as "Sal By Role Type dup"</li>
+  <li>Select only Role Type, Min Salary, and Max Salary columns</li>
+  <li>Change Min and Max Salary type to currency</li>
+  <li>Multiply values by 1000</li>
+  <li>Group rows by Role Type and get the average for Min and Max Salary</li>
+</ul>
+
+<h3>Group by Company Size</h3>
+<ul>
+  <li>Create a reference of raw data → Rename it as "Sal By Role Size ref"</li>
+  <li>Select only Size, Min Salary, and Max Salary columns</li>
+  <li>Change Min and Max Salary type to currency</li>
+  <li>Multiply values by 1000</li>
+  <li>Group rows by Size and get the average for Min and Max Salary</li>
+</ul>
+
+<h2>Step 6 Merge State Mapping</h2>
+<ul>
+  <li>Click Unclean DS Jobs</li>
+  <li>Right-click in the Queries pane → New Query → Open Workbook State Mapping</li>
+  <li>Select the columns and click OK</li>
+  <li>Merge the queries on State Abbreviation</li>
+  <li>Rename the merged column as "State Full Name"</li>
+  <li>Remove nulls and blanks</li>
+</ul>
+
+<h2>Step 7 Group by State</h2>
+<ul>
+  <li>Create a reference of raw data → Rename it as "Sal By State ref"</li>
+  <li>Select only State Full Name, Min Salary, and Max Salary columns</li>
+  <li>Change Min and Max Salary type to currency</li>
+  <li>Multiply values by 1000</li>
+  <li>Group rows by State Full Name and get the average for Min and Max Salary</li>
+</ul>
+
+<h2>Step 13: View Query Dependencies</h2>
+<ul>
+  <li>Go to View Menu → Click Dependencies</li>
+  <li>Check if all queries are correctly linked</li>
+</ul>
+
+<h2>Here's the screenshot of my output before I started data cleaning</h2>
+<img src="https://github.com/roannefajardo/EDM-Fajardo/blob/main/Lab%20Task%202/images/QueryNaMadumi.png?raw=true" alt="Before Data Cleaning">
+
+<h2>Here's the screenshot of my output after I started data cleaning</h2>
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Clead_DS_jobs.png" alt="After Data Cleaning">
+
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Role%20Size%20Ref.png" alt="Role Size Ref">
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Role%20Type%20Ref.png" alt="Role Type Ref">
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Size%20RoleType%20Ref.png" alt="Size RoleType Ref">
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/State%20Ref.png" alt="State Ref">
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/State.png" alt="State">
+
+<h2>Here's the screenshot of the Query Dependencies</h2>
+<img src="https://github.com/roannefajardo/EDM-Fajardo/raw/main/Lab%20Task%202/images/Querydependency.png" alt="Query Dependencies">
+    </div>
+  </section>
+
+  <footer>
+    🌷 © Roanne Fajardo | BSIS I102 | 2025 🌷
+  </footer>
+
+</body>
+</html>
